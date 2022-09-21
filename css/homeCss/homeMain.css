@@ -1,0 +1,82 @@
+main{
+    height: 82vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.titles{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 96px  ;
+
+}
+
+.titles h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 80px;
+    font-weight: 300;
+    padding-bottom: 50px;
+    width: 700px;   
+}
+
+.titles a{
+    color: var(--primal-color);
+    font-weight: 700;
+}
+
+/* .titles img{
+    height: 
+    padding-right: 80px;
+} */
+
+.studantIMG{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.studantIMG img{
+    height: 600px;
+}
+
+.cursosList{
+    display: flex;
+    justify-content: center;
+}
+
+.cursosList ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 96px;
+    gap: 50px;
+}
+
+.cursosList li{
+    background-color:var(--primal-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 500px;
+    box-shadow: 12px 12px 4px rgba(51, 71, 176, 0.5);
+}
+
+
+.cursosList span{
+    color: white;
+    font-size: 64px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    padding-left:24px;
+
+}
+
+
+
+
+
+

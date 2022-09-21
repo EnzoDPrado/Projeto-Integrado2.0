@@ -1,0 +1,26 @@
+main{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+.cards li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 200px;
+    background-color: var(--primal-color);
+    color: #fff;
+    padding-top: 16px   ;
+}
+
+.cards span{
+    width: 180px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+}

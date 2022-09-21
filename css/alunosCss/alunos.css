@@ -1,0 +1,50 @@
+.searchLine{
+    height: 50px;
+    background-color: #BCC2E5;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+.selections{
+    padding-left: 96px;
+}
+
+.selections select{
+    height: 30px;
+    background-color: transparent;
+    border:none;   
+    color: var(--primal-color);
+}
+
+
+.legenda{
+    display: flex;
+    padding-right: 96px;
+    color: var(--primal-color);
+}
+
+.title{
+    padding-right: 24px;
+}
+
+.curs{
+    padding-right: 30px;
+    padding-left: 10px;
+}
+
+.blueBlock{
+height: 20px;
+width: 20px;
+background-color: var(--primal-color);
+}
+
+.yellowBlock{
+    height: 20px;
+    width: 20px;
+    background-color:#E5B657;
+}
+
+.finalizado{
+    padding-left: 10px;
+}
