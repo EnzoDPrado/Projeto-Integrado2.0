@@ -1,9 +1,40 @@
 main{
     display: flex;
     flex-direction: column;
+    height: 82vh;
     
 }
 
+.title{
+    padding-top: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title h1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 64px;
+    color: var(--primal-color);
+}
+
+
+.cards{
+    padding-top: 49px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 1350px;
+    gap: 61px;
+}
 
 .cards li{
     display: flex;

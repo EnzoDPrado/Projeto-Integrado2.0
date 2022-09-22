@@ -20,13 +20,14 @@
 
 .legenda{
     display: flex;
+    align-items: center;
+    justify-content: center;
     padding-right: 96px;
     color: var(--primal-color);
 }
 
-.title{
-    padding-right: 24px;
-}
+
+
 
 .curs{
     padding-right: 30px;
