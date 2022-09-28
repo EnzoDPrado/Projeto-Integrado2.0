@@ -23,6 +23,7 @@ main{
 .cards{
     padding-top: 49px;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
@@ -54,4 +55,9 @@ main{
     font-size: 18px;
     font-weight: 500;
     font-family: 'Roboto', sans-serif;
+}
+
+.cards img{
+    height: 200px;
+    width: 200px;
 }

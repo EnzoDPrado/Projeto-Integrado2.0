@@ -8,16 +8,16 @@ const fetchCursos = async () => {
 
 const data = await fetchCursos();
 
-
-
 const createCard = (data) => {
     const cards = data.cursosInfos
     cards.forEach(card => {
 
-        const a = document.createElement('a')
-        a.setAttribute('href', '');
+        const a = document.createElement('a');
+
         const li = document.createElement('li');
-        
+        li.setAttribute('id', card.sigla);
+        li.addEventListener('click', linkPageDS)
+
         const img = document.createElement('img');
         img.src = card.icone;
         img.classList.add('cursoIMG');
@@ -25,6 +25,7 @@ const createCard = (data) => {
 
         const span = document.createElement('span');
         span.textContent = card.sigla;
+        span.setAttribute('id', 'sigla');
 
         
         li.append(img);
@@ -36,4 +37,16 @@ const createCard = (data) => {
     });
 }
 
+const linkPageDS = (e) => {
+    const cardId = e.target.id;
+    localStorage.setItem('idCurso', cardId);
+    location.href = '../assets/html/alunos.html';
+}
+
 createCard(data);
+
+
+
+
+
+ 
