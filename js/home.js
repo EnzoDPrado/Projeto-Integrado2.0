@@ -7,8 +7,12 @@ const fetchCursos = async () => {
 }
 
 const data = await fetchCursos();
+let cursoInfo = await fetchCursos;
 
 const createCard = (data) => {
+  
+    cursoInfo = cursoInfo.cursoInfo;
+    
     const cards = data.cursosInfos
     cards.forEach(card => {
 
@@ -21,11 +25,13 @@ const createCard = (data) => {
         const img = document.createElement('img');
         img.src = card.icone;
         img.classList.add('cursoIMG');
+        img.setAttribute('id', card.sigla);
 
 
         const span = document.createElement('span');
         span.textContent = card.sigla;
         span.setAttribute('id', 'sigla');
+        span.setAttribute('id', card.sigla);
 
         
         li.append(img);
