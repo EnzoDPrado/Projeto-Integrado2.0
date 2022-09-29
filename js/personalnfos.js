@@ -20,6 +20,21 @@ const fetchDisciplinas = async() => {
 let {AlunoInfos} = await fetchInfoAluno();
 console.log(AlunoInfos)
 let {disciplinas} = await fetchDisciplinas();
+console.log(disciplinas);
+
+const getSiglasMaterias = (nomeDisciplina = '') => {
+    const sigla = []
+    const arrayStr = nomeDisciplina.split(' ')
+    console.log(arrayStr)
+
+    arrayStr.forEach(filter => {
+        const letra = filter.slice(0, 1);
+        sigla.push(letra.toUpperCase())
+    })
+
+    return sigla.join('')
+    
+}
 
 const create = () =>{
     
@@ -39,6 +54,58 @@ const create = () =>{
 
     //Parte com as descriçoes das materias
     
+    const ul = document.createElement('ul');
+    disciplinas.forEach(matter => {
+        const li = document.createElement('li');
+
+        const spanProgress = document.createElement('span');
+        spanProgress.setAttribute('id', 'progressPorcentage');
+        spanProgress.textContent = matter.media;
+
+        const spanMatter = document.createElement('span');
+        spanMatter.setAttribute('id', 'matterName');
+        spanMatter.textContent = getSiglasMaterias(matter.nome);
+
+        const bar = document.createElement('div');
+        bar.classList.add('bar');
+
+        const progress = document.createElement('div');
+        progress.classList.add('progress');
+        if(matter.media <= 30){
+            progress.style.backgroundColor = '#FF0000'
+            progress.style.boxShadow = '0px 0px 24px #FF0000'
+        }else if(matter.media > 30 && matter.media <= 50){
+            progress.style.backgroundColor = '#FFFF00'
+            progress.style.boxShadow = '0px 0px 24px #FFFF00'
+        }else{
+            progress.style.backgroundColor = '#3347B0'
+            progress.style.boxShadow = '0px 0px 24px #3347B0'
+        }
+        
+
+        progress.style.height = `${matter.media}%`
+
+
+
+        
+
+        holdContainers.appendChild(stats);
+        stats.appendChild(ul);
+        ul.appendChild(li);
+        li.appendChild(spanMatter);
+        li.appendChild(bar);
+        bar.appendChild(progress);
+        li.appendChild(spanProgress);
+    })
+
+
+
+  
+    
+    
+
+
+
 }
 
 create();
