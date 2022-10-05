@@ -46,7 +46,7 @@ const createCard = (data) => {
 const linkPageDS = (e) => {
     const cardId = e.target.id;
     localStorage.setItem('idCurso', cardId);
-    location.href = '../html/alunos.html';
+    location.href = '/Projeto-Integrado2.0/html/alunos.html';
 }
 
 createCard(data);
