@@ -94,5 +94,5 @@ createCardAlunos(response);
 cards.addEventListener('click',(e) =>{
     console.log(e.target.id);
     localStorage.setItem('matricula', e.target.id);
-    location.href = '../html/infos.html';
+    location.href = '/html/infos.html';
 } )
