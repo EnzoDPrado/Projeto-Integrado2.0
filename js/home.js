@@ -1,7 +1,7 @@
 const container = document.querySelector('#cursoList');
 
 const fetchCursos = async () => {
-    const response = await fetch('http://localhost:8080/cursos');
+    const response = await fetch('https://lionsschoolenzodpproject.netlify.app/.netlify/functions/api/cursos');
     const json = await response.json()
     return json;
 }
@@ -46,7 +46,7 @@ const createCard = (data) => {
 const linkPageDS = (e) => {
     const cardId = e.target.id;
     localStorage.setItem('idCurso', cardId);
-    location.href = '../assets/html/alunos.html';
+    location.href = '../html/alunos.html';
 }
 
 createCard(data);

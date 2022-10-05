@@ -6,13 +6,13 @@ const stats = document.querySelector('.stats');
 const matricula = localStorage.getItem('matricula');
 
 const fetchInfoAluno = async() => {
-    const response = await fetch(`http://localhost:8080/aluno/${matricula}`);
+    const response = await fetch(`https://lionsschoolenzodpproject.netlify.app/.netlify/functions/api/aluno/${matricula}`);
     const json = await response.json();
     return json;
 }
 
 const fetchDisciplinas = async() => {
-    const response = await fetch(`http://localhost:8080/disciplinas/${matricula}`);
+    const response = await fetch(`https://lionsschoolenzodpproject.netlify.app/.netlify/functions/api/disciplinas/${matricula}`);
     const json = await response.json();
     return json;
 }

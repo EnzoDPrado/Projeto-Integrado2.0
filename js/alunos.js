@@ -8,21 +8,21 @@ const id = localStorage.getItem('idCurso');
 console.log(id);
 
 const fetchAlunos = async () => {
-    const response = await fetch(`http://localhost:8080/alunos/${id}`);
+    const response = await fetch(`https://lionsschoolenzodpproject.netlify.app/.netlify/functions/api/alunos/${id}`);
     const json = await response.json()
     return json;
 }
 
 
 const fetchCurso = async () => {
-    const response = await fetch(`http://localhost:8080/curso/${id}`);
+    const response = await fetch(`https://lionsschoolenzodpproject.netlify.app/.netlify/functions/api/curso/${id}`);
     const json = await response.json()
     return json;
 }
 
 
 const fetchAnosConclusao = async () => {
-    const response = await fetch(`http://localhost:8080/curso/anoFinalization/${id}`);
+    const response = await fetch(`https://lionsschoolenzodpproject.netlify.app/.netlify/functions/api/curso/anoFinalization/${id}`);
     const json = await response.json();
     return json;
 }
